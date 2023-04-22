@@ -14,7 +14,7 @@ class Instaloader_Class:
 
         self.login(username, password)
 
-        profile = instaloader.Profile.from_username(self.L.context, username)
+        profile = instaloader.Profile.from_username(self.L.context, RECON_USERNAME  )
         text_storage = f"{RECON_USERNAME} falowees: \n"
         for followee in profile.get_followees():
             text_storage += followee.username + "\n"
